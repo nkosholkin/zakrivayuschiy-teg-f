@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link href="./images/favicon.ico" rel="icon" sizes="any" />
+    <link href="./svg/favicon.svg" type="image/svg+xml" rel="icon" />
+    <link href="./images/favicon.png" rel="apple-touch-icon" />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -10,16 +14,19 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+    <link href="./fonts/fonts.css" rel="stylesheet" />
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
+    <header class="header wrapper">
+      <a href="#" class="header__logo">&lt;/html&gt;</a>
+      <h1 class="header__title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
             <button type="button" data-theme="dark" class="theme-menu__button">
-              Темнооо
+              Темно
             </button>
           </li>
           <li class="theme-menu__item">
@@ -40,7 +47,10 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="conent wrapper">
+
+
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

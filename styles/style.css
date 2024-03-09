@@ -15,6 +15,116 @@
 */
 
 .page {
+  font-family: var(--font-family, "Inter", sans-serif);
+  font-variation-settings: 'wght' var(--main-font-weight, 400);
+
+  color: var(--text-color);
+
+  background-image: var(--background_gradient, none);
+  background-size: cover;
+  background-attachment: fixed;
+
+  padding: 100px 0;
+
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
+
+.wrapper {
+  max-inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  margin: 0 auto;
+}
+
+.header {
+  border: 2px solid var(--main-text-color);
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px;
+  font-family: var(--accent-font-family);
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--background-color);
+}
+
+.header__logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header__logo:focus,
+.header__logo:focus-visible {
+  outline: none;
+}
+
+.header__title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  /* margin-block-start: 20px; */
+  margin-block: 20px 24px;
+}
+
+/* .header__theme-menu {
+  margin-block-start: 25px;
+} */
+
+.header__theme-menu {
+  display: grid;
+  grid-template-columns: clamp(9.625rem, 6.0819rem + 15.1174vw, 19.6875rem) 1fr;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: transparent;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  appearance: none;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: -20px;
+  animation: arrow 0.5s ease-in-out infinite alternate;
+}
+
+.theme-menu__button:not(:disabled)::after {
+  content: "";
+  display: block;
+  background: currentColor;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 2px;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
