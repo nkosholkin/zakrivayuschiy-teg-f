@@ -336,3 +336,26 @@
     inline-size: 28px;
   }
 }
+
+
+
+.modal {
+  border: 2px solid var(--main-text-color);
+  padding-block: 30px;
+  padding-inline: clamp(2.625rem, 2.8891rem + -1.1268vw, 1.875rem); /* 42px to 30px */
+  color: var(--main-text-color);
+  font-family: var(--accent-font-family);
+  line-height: 150%;
+  text-transform: uppercase;
+  background: var(--background-color);
+  max-inline-size: 353px;
+}
+
+.modal[open] {
+  display: grid;
+  /* Safari fix */
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
+}
+
+

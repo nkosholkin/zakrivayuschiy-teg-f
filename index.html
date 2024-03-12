@@ -156,9 +156,29 @@
         </button>
       </div>
 
-
-
     </main>
+
+
+    <dialog id="dialog" class="dialog">
+      <div class="dialog__title-wrapper">
+        <svg
+          class="dialog-svg-floppy"
+          width="39"
+          height="39"
+          viewbox="0 0 39 39"
+        >
+          <use href="./svg/floppy.svg#floppy-icon"></use>
+        </svg>
+        <h2 class="dialog__title">Вставьте дискету, чтобы продолжить</h2>
+      </div>
+      <form method="dialog" class="dialog-form">
+        <button type="submit" class="button dialog__button">
+          <span class="button__text">OK</span>
+        </button>
+      </form>
+    </dialog>
+
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>
