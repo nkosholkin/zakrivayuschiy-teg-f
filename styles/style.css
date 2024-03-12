@@ -32,7 +32,8 @@
 }
 
 .wrapper {
-  max-inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  max-inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); 375px to 700px
+  max-inline-size: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem); /*375px to 696px */
   margin: 0 auto;
 }
 
@@ -60,7 +61,7 @@
 .header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   /* margin-block-start: 20px; */
-  margin-block: 20px 24px;
+  margin-block: 20px 23px;
 }
 
 /* .header__theme-menu {
@@ -151,8 +152,8 @@
 }
 
 .card__title {
-  padding-block-start: clamp(0.25rem, 0.272rem + -0.0939vw, 0.1875rem); /* 4px to 3px */
-  padding-block-end: 3px; /* 6px to 3px */
+  padding-block-start: 3px;
+  padding-block-end: 6px;
   padding-inline-start: 10px;
   padding-inline-end: clamp(0.625rem, 0.3169rem + 1.3146vw, 1.5rem); /* 10px to 24px */
   font-size: 18px;
@@ -160,18 +161,25 @@
   font-family: inherit;
   }
 
+@media (width <= 375) {
+  .card__title {
+  padding-block-start: 4px;
+  }
+}
+
 .card__picture-container {
   position: relative;
   border-block-start: 2px solid var(--main-text-color);
+  border-block-end: 2px solid var(--main-text-color);
 }
 
 .card__image {
+  display: block;
   position: relative;
   object-fit: cover;
   object-position: center;
   max-inline-size: 100%;
   aspect-ratio: 1/1;
-  border-block-end: 2px solid var(--main-text-color);
 }
 
 .card__about-text {
@@ -204,6 +212,12 @@
   display: flex;
   background-color: var(--background-color);
   border: none;
+  cursor: pointer;
+
+}
+
+.like-icon {
+  padding-block-start: 2px;
 }
 
 .card__icon-button .like-icon {
@@ -303,7 +317,6 @@
   gap: 8px;
   min-block-size: 55px;
   min-inline-size: 339px;
-
 }
 
 .button__save-wrapper {
@@ -337,9 +350,13 @@
   }
 }
 
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
 
-
-.modal {
+.dialog {
+  gap: 30px;
   border: 2px solid var(--main-text-color);
   padding-block: 30px;
   padding-inline: clamp(2.625rem, 2.8891rem + -1.1268vw, 1.875rem); /* 42px to 30px */
@@ -351,11 +368,40 @@
   max-inline-size: 353px;
 }
 
-.modal[open] {
-  display: grid;
-  /* Safari fix */
-  grid-template-rows: repeat(2, min-content);
-  gap: 30px;
+
+.dialog__button {
+  inline-size: 100%;
+  min-block-size: 38px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog-svg-floppy {
+  flex-shrink: 0;
+  block-size: 39px;
+  inline-size: 39px;
+}
+
+.dialog__title {
+  color: var(--main-text-color);
+  font-family: var(--accent-font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  max-inline-size: 234px;
 }
 
 
+
+.grayscale {
+  filter: grayscale(0.8);
+}
