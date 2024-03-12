@@ -10,6 +10,11 @@
 
   --main-text-color: #000;
   --background-color: #fff;
+  --button-text-color: #fff;
+
+  --like-contour-color: var(--main-text-color, #000);
+  --like-sparks-color: red;
+  --like-main-body-color: none;
 
   --main-gradient-color: #d3d3d3;
   --top-gradient-color: #e7e7e7;
