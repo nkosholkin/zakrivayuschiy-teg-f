@@ -294,8 +294,7 @@
   font-family: var(--accent-font-family);
   font-size: 14px;
   text-shadow: 1px 1px var(--background-color),
-    -1px -1px var(--background-color),
-    -1px 1px var(--background-color),
+    -1px -1px var(--background-color), -1px 1px var(--background-color),
     1px -1px var(--background-color);
   inset-block-start: clamp(1.5625rem, 1.5185rem + 0.1878vw, 1.6875rem);
   inset-inline-end: clamp(
@@ -306,7 +305,10 @@
   mix-blend-mode: hard-light;
 }
 
-@supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(---background-color))) {
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(---background-color))
+) {
   .image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--background-color);
@@ -337,7 +339,7 @@
 @media (width<=375px) {
   .card__title {
     padding-block-start: 4px;
-    padding-block-end: 4.2px;
+    padding-block-end: 4.3px;
   }
 
   .save-button {
@@ -415,20 +417,20 @@
   filter: grayscale(0.8);
 }
 
-.invert {
-  filter: invert(80%);
+.saturate {
+  filter: saturate(148%);
 }
 
 .sepia {
   filter: sepia(80%);
 }
 
-.hue {
-  filter: hue-rotate(-90deg);
+.invert {
+  filter: invert(80%);
 }
 
-.saturate {
-  filter: saturate(148%);
+.hue {
+  filter: hue-rotate(-90deg);
 }
 
 .blur {
