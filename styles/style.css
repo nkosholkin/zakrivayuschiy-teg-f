@@ -414,31 +414,31 @@
 
 /* фильтры для картинок */
 
-.grayscale {
+.card__image-grayscale {
   filter: grayscale(0.8);
 }
 
-.saturate {
+.card__image-saturate {
   filter: saturate(148%);
 }
 
-.sepia {
+.card__image-sepia {
   filter: sepia(80%);
 }
 
-.invert {
+.card__image-invert {
   filter: invert(80%);
 }
 
-.hue {
+.card__image-hue {
   filter: hue-rotate(-90deg);
 }
 
-.blur {
+.card__image-blur {
   filter: blur(5px);
 }
 
-.mix-filter {
+.card__image-mix-filter {
   filter: hue-rotate(-45deg) saturate(118%) blur(2px);
 }
 
