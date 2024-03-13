@@ -45,7 +45,6 @@
   transition: fill 0.1s linear;
 }
 
-
 .like-icon .heart {
   transform-origin: center;
 }
@@ -95,6 +94,10 @@
   animation: heart 0.3s ease-in 0.1s 1 alternate;
 }
 
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s 1 alternate;
+}
+
 /* heart scale */
 
 @keyframes heart {
@@ -104,10 +107,6 @@
   to {
     transform: scale(1.5);
   }
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in 0.3s 1 alternate;
 }
 
 /* sparks */
