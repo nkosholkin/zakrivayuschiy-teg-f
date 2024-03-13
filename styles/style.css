@@ -435,11 +435,11 @@
 }
 
 .blur {
-  filter: blur(10px);
+  filter: blur(5px);
 }
 
 .mix-filter {
-  filter: hue-rotate(-45deg) saturate(118%) invert(90%);
+  filter: hue-rotate(-45deg) saturate(118%) blur(2px);
 }
 
 /* small screens style */
