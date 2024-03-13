@@ -171,7 +171,6 @@
   ); /* 10px to 24px */
   padding-block-start: 3.6px;
   padding-block-end: 5.2px;
-  font-family: inherit;
   font-size: 18px;
   font-variation-settings: "wght" var(--heading-font-weight, 700);
 }
@@ -209,6 +208,17 @@
     1.5625rem
   ); /* 13px to 25px */
   mix-blend-mode: hard-light;
+}
+
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(---background-color))
+) {
+  .card__watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+  }
 }
 
 /* card about section */
@@ -273,7 +283,6 @@
   justify-content: center;
   align-items: center;
   border: 2px solid var(--main-text-color);
-  overflow: hidden;
   font-family: var(--accent-font-family);
   font-weight: 400;
   font-size: 14px;
@@ -326,17 +335,6 @@
 
 .button:hover .button__text {
   color: var(--button-text-color);
-}
-
-@supports (
-  (text-stroke: 1px var(--background-color)) or
-    (-webkit-text-stroke: 1px var(---background-color))
-) {
-  .image-label {
-    text-shadow: none;
-    -webkit-text-stroke: 1px var(--background-color);
-    text-stroke: 1px var(--background-color);
-  }
 }
 
 .save-button {
