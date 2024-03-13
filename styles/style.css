@@ -18,7 +18,7 @@
   padding-inline: 0;
   padding-block-start: 100px;
   color: var(--text-color);
-  font-family: var(--font-family, "Inter", sans-serif);
+  font-family: var(--main-font-family);
   background-image: var(--background_gradient, none);
   background-size: cover;
   background-attachment: fixed;
@@ -40,16 +40,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-block-end: 100px;
   border: 2px solid var(--main-text-color);
-  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px; /* padding-block-start 120px to 136px */
   font-family: var(--accent-font-family);
   text-transform: uppercase;
   background-color: var(--background-color);
+  margin-block-end: 100px;
 }
 
 .header__logo {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem); /* 49px to 65px */
   text-decoration: none;
   cursor: pointer;
 }
@@ -61,13 +61,13 @@
 
 .header__title {
   margin-block: 20px 25px;
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem); /* 14px to 23px */
 }
 
 .header__theme-menu {
   display: flex;
   flex-direction: column;
-  padding-inline-start: 19px;
+  padding-inline-start: 20px;
 }
 
 .theme-menu__list {
@@ -105,14 +105,17 @@
 
 .theme-menu__button:not(:disabled)::after {
   content: "";
+  position: absolute;
   display: block;
-  background: currentColor;
+  background-color: var(--main-text-color);
   transition: transform 0.3s ease;
+  inset-block-start: 100%;
   transform: scaleX(0);
   transform-origin: left;
   inline-size: 100%;
   block-size: 2px;
 }
+
 
 .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
@@ -187,7 +190,8 @@
 }
 
 .card__about {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 25px;
   padding-inline: 25px;
   padding-block: 25px;

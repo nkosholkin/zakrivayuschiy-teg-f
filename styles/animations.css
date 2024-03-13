@@ -15,14 +15,14 @@
 
 /* пункт меню */
 
-/* @keyframes arrow {
+@keyframes arrow {
   from {
     transform: translate(0);
   }
   to {
     transform: translate(4px);
   }
-} */
+}
 
 /* До анимации */
 
