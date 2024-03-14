@@ -463,5 +463,6 @@
 
   .dialog {
     padding-inline: 42px;
+    max-inline-size: 341px;
   }
 }
